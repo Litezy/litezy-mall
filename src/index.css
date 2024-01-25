@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Montserrat:wght@200;400&family=Nunito:wght@200;300;400;600;700;800&family=Open+Sans:wght@400;600&family=Poppins:wght@200;400;500;600&family=Roboto:wght@400;500&display=swap');
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.info {
+  background-color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.cart>p>span {
+  font-family: nunito, sans-serif;
+  color: #2e3766;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.search,.shop-category{
+  font-family: nunito, sans-serif;
+}
+.category-list{
+  margin-top: 1rem;
+  
+}
+.shop-category{
+  border: 2px solid #ced0db;
+}
+.category-list>li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding:0 .9rem; */
+  gap: 1rem;
+  font-family: nunito, sans-serif;
+  margin-top: 1rem;
+  padding-bottom: .5rem;
+}
+.category-list>li:not(:last-child){
+  border-bottom: 2px solid #ced0db;
+}
+.card-bg{
+  background: linear-gradient(10deg, #d2bb, #8b18e7, #844ca7, #d2bb);
+  font: bold;
+  /* -webkit-background-clip: text; */
+   /* -webkit-text-fill-color: transparent; */
+}
+.imgAlt{ 
+  mix-blend-mode:overlay;
+ }
+.font{
+  font-family: Nunito, sans-serif;
+}
+.roboto{
+  font-family: Roboto, Open Sans, sans-serif;
+}
+.mont{
+  font-family: Montserrat, sans-serif;
+}
+.spice{
+  font-family: Bungee Spice, sans-serif;
+}
+.poppins{
+  font-family: Poppins, sans-serif;
+}
+.card-border{
+  border-top: 2px solid gray;
+}
+.hr{
+  border: 2px solid #c2c5d3;
+}
+.dec{
+  text-decoration: line-through;
+
+}
+.alt{
+  transform: scaleX(-1);
+
+}
+.follow:hover{
+  /* transform: scaleY(0.9); */
+  transform: scaleX(0.6);
+  transform: scaleX(-1);
+  transition: all 0.5s ease-in-out;
+}
+/* .slider{
+  display: flex;
+  flex-direction: row;
+} */
+
+.sliderdown::-webkit-scrollbar {
+  height: 0;
+}
+.slider{
+  transition: all ease-in-out 1.2s;
+}
+.icon{
+  transform:rotateX(20deg)
+}
+@media screen and (max-width: 500px) {
+  .card-border{
+    border-top: none;
+  }
+}
