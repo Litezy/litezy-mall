@@ -4,13 +4,17 @@ import { FaEnvelopeOpen, FaPhone, FaRotate, FaUserLarge } from "react-icons/fa6"
 import { IoIosHeartEmpty } from "react-icons/io";
 import { TiShoppingCart } from "react-icons/ti";
 import { FaBars } from "react-icons/fa";
-import { RiArrowDropDownLine } from "react-icons/ri";
+import { MdKeyboardArrowUp } from "react-icons/md";
 import { AiOutlineClose } from "react-icons/ai";
 import { MdScreenshotMonitor } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import SubCategories from '../utils/SubCategories';
+import { MdKeyboardArrowDown } from "react-icons/md";
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 const CartandSearch = () => {
     const [bars, setBars] = useState(false)
+    const [showSub, setShowSub] = useState(false)
    
 
     const Icon = bars === true? AiOutlineClose : FaBars
@@ -18,7 +22,11 @@ const CartandSearch = () => {
         setBars(prev =>  !prev )
     }
     
+ const Arrow = showSub === true?  MdKeyboardArrowDown : MdKeyboardArrowUp
 
+  const  controlSUb = () =>{
+    setShowSub(prev => !prev)
+  }
 
     // const transformBar = {
     //     transform: bars === true ? 'rotate(180deg)': 'rotate(0deg)',
@@ -26,7 +34,7 @@ const CartandSearch = () => {
     // }
     return (
         <div>
-            <div className={`flex items-center w-[100%] justify-between mx-auto pt-2 ${bars ? 'fixed z-20 bg-slate-400/50':''}`}>
+            <div className={`flex items-center w-[100%] justify-between mx-auto pt-2 ${bars ? 'fixed z-20 -mt-4 bg-teal-800/10':''}`}>
                 <div className="cart pl-8 md:px-10 w-[80%] md:w-fit flex items-center justify-between gap-3  ">
                     <FiShoppingCart className='text-4xl md:text-5xl font-bold text-yellow-400' />
                     <p className='md:font-bold font font-medium text-md md:text-4xl text-[#0d1a50] w-full'>Litezy Mall</p>
@@ -71,14 +79,20 @@ const CartandSearch = () => {
                 </div>
             </div>
 
-            <div className="w-[90%] h-fit mx-auto mt-4 md:hidden">
+            <div className="w-[90%] h-fit mx-auto mt-4 md:hidden ">
 
-                    <div className=" bg-[#fff9ef] px-2 w-full ap-3 outline-none h-fit rounded-full shadow-md flex items-center justify-between">
-                        <p className='flex border justify-center items-center rounded-full gap-2 px-1 pl-1 bg-white  font-medium text-[10px] '>All Categories <RiArrowDropDownLine className='font-light text-3xl cursor-pointer' /></p>
+                    <div className=" bg-[#fff9ef] px-2 w-full relative ap-3 outline-none h-fit rounded-full shadow-md flex items-center justify-between">
+                        <div onClick={controlSUb} className='flex border justify-center items-center rounded-full px-1 pl-1 bg-white  font-medium text-[11px] '>
+                            <p>All Categories</p> 
+                            <Arrow className='font-light text-2xl cursor-pointer' /></div>
                         <input className=' w-[50%] bg-transparent text-[12px] pl-4 h-10 outline-none' type="text" placeholder='Search Products...' />
-                        <button className='bg-[#fdbe55] text-lg px-fit py-2 rounded-full text-white '>Search</button>
+                        <button className='bg-[#fdbe55]  px-2 py-1 rounded-full text-white text-[11px]'>Search</button>
+                        
                     </div>
+                   {showSub ?  <SubCategories showSub={showSub}/>:''}
                 </div>
+                
+            
         </div>
     )
 }

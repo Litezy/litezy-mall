@@ -53,7 +53,7 @@ body{
   padding-bottom: .5rem;
 }
 .category-list>li:not(:last-child){
-  border-bottom: 2px solid #ced0db;
+  border-bottom: 2px solid #e5e6ec;
 }
 .card-bg{
   background: linear-gradient(10deg, #d2bb, #8b18e7, #844ca7, #d2bb);
@@ -112,6 +112,9 @@ body{
 }
 .icon{
   transform:rotateX(20deg)
+}
+.subcategory{
+  transition: all ease-in-out 1.3s;
 }
 @media screen and (max-width: 500px) {
   .card-border{
