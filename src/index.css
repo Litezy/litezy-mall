@@ -20,6 +20,7 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* background-color: #f8fafc; */
 }
 .info {
   background-color: #f7f7f7;
