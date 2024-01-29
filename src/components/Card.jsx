@@ -31,12 +31,12 @@ const Card = () => {
     }
    
     return (
-        <div className='w-full px-2 -mt-8 md:mt-0'>
-            <div className="md:w-[95%] w-[90%] md:mt-0  md:mx-10 flex items-start justify-start gap-6 overflow-x-hidden card-border mb-10">
+        <div className='w-full  px-2 -mt-8 md:mt-0'>
+            <div className="md:w-[95%] w-[100%] md:mt-0  md:mx-10 flex items-start justify-start gap-6 overflow-x-hidden card-border mb-10">
                 <div  className="w-[25%]  hidden md:flex max-w-[21%] ">
                   <AllCategories handleClick={() => handleClick()} heightInc={heightInc} state={chevron}/>
                 </div>
-                <div className=" mx-auto md:w-full overflow-hidden">
+                <div className="w-full mx-auto md:w-full overflow-hidden">
                     <div className="flex flex-col w-full ">
                         <ul className='flex  items-center  w-full md:rounded-full justify-between md:w-4/6 px-2 text-center md:text-start py-3 capitalize md:bg-[#fff9ef] gap-2  mb-4 text-[#0d1a50] font-bold text-sm md:text-md mt-2 h-fit'>
                             <li className=' px-2 py-1 md:bg-white rounded-full cursor-pointer'>home</li>
