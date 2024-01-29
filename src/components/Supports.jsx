@@ -30,7 +30,7 @@ const Supports = () => {
         },
     ]
     return (
-        <div className='md:flex grid-cols-2 grid items-center justify-between  w-full border-2 '>
+        <div className='md:flex grid-cols-2 grid items-center justify-between  w-full '>
             {support.map((item, index) => (
                 <div className=" flex items-start md:items-center md:justify-between mb-2 gap-4 " key={index} >
                     <div className="px-2 py-2 rounded-full bg-[#ffeccc] w-fit">

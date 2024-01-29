@@ -53,7 +53,7 @@ const SubHeaders = () => {
   const Next = () => {
     setCurr((prevCurr) => {
       const newCurr = prevCurr === items.length - 1 ? 0 : prevCurr + 1;
-      const newTranslateX = `translateX(-${newCurr * 100}vw)`;
+      const newTranslateX = `translateX(-${newCurr * 90}vw)`;
       document.getElementById("slide").style.transform = newTranslateX;
       return newCurr;
     });
@@ -62,7 +62,7 @@ const SubHeaders = () => {
   const Prev = () => {
     setCurr((prevCurr) => {
       const newCurr = prevCurr === 0 ? items.length - 1 : prevCurr - 1;
-      const newTranslateX = `translateX(-${newCurr * 100}vw)`;
+      const newTranslateX = `translateX(-${newCurr * 90}vw)`;
       document.getElementById("slide").style.transform = newTranslateX;
       return newCurr;
     });
