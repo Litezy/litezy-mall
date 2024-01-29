@@ -38,7 +38,7 @@ const Card = () => {
                 </div>
                 <div className=" mx-auto md:w-full overflow-hidden">
                     <div className="flex flex-col w-full ">
-                        <ul className='flex  items-center border w-full md:rounded-full justify-between md:w-4/6 px-2 text-center md:text-start py-3 capitalize md:bg-[#fff9ef] gap-2  mb-4 text-[#0d1a50] font-bold text-sm md:text-md mt-2 h-fit'>
+                        <ul className='flex  items-center  w-full md:rounded-full justify-between md:w-4/6 px-2 text-center md:text-start py-3 capitalize md:bg-[#fff9ef] gap-2  mb-4 text-[#0d1a50] font-bold text-sm md:text-md mt-2 h-fit'>
                             <li className=' px-2 py-1 md:bg-white rounded-full cursor-pointer'>home</li>
                             <li><div className="md:flex md:items-center gap-2 md:px-4 md:py-1 md:bg-white rounded-full cursor-pointer">shop <span><IoIosArrowDown className='hidden md:flex'/></span></div></li>
                             <li><div className="md:flex md:items-center gap-2 md:px-4 md:py-1 md:bg-white rounded-full cursor-pointer">offer <span><IoIosArrowDown className='hidden md:flex'/></span></div></li>

@@ -36,10 +36,10 @@ const CartandSearch = () => {
     // }
     return (
         <div>
-            <div className={`flex items-center w-[100%] justify-between mx-auto pt-2 ${bars ? 'fixed z-20 -mt-4 bg-teal-800/10' : ''}`}>
+            <div className={`flex items-center w-[100%] justify-between mx-auto pt-2 ${bars ? 'fixed z-20 -mt-4 bg-teal-800/10' : '' }headscroll`}>
                 <div className="cart pl-8 md:px-10 w-[80%] md:w-fit flex items-center justify-between gap-3  ">
                     <FiShoppingCart className='text-4xl md:text-5xl font-bold text-yellow-400' />
-                    <p className='md:font-bold font font-medium text-md md:text-4xl text-[#0d1a50] w-full'>Litezy Mall</p>
+                    <p className='md:font-bold font font-bold  text-md md:text-4xl text-[#0d1a50] w-full'>Litezy Mall</p>
                 </div>
                 <div className="md:hidden text-3xl w-20 flex items-center justify-center">
                     <Icon id='bars' onClick={Change} className="transition-all icon ease-in-out duration-100" />

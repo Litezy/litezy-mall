@@ -6,7 +6,7 @@ import NewItems from '../NewItems'
 
 const PageLayout = ({children}) => {
     return (
-        <div className='w-full overflow-y-hidden'>
+        <div className='w-full overflow-hidden'>
             <InfoHeaders />
             <CartandSearch />
             <div className="mt-10 w-[95%]  mx-auto ">

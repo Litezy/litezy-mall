@@ -20,7 +20,7 @@ body{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* background-color: #f8fafc; */
+ overflow-x: hidden;
 }
 .info {
   background-color: #f7f7f7;
@@ -106,7 +106,7 @@ body{
 } */
 
 .sliderdown::-webkit-scrollbar {
-  height: 0;
+  width: 0;
 }
 .slider{
   transition: all ease-in-out 1.2s;
@@ -117,6 +117,7 @@ body{
 .subcategory{
   transition: all ease-in-out 1.3s;
 }
+
 @media screen and (max-width: 500px) {
   .card-border{
     border-top: none;
