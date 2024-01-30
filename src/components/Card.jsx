@@ -19,6 +19,7 @@ import AllCategories from '../utils/AllCategories';
 
 const Card = () => {
     const [chevron, setChevron] = useState(false)
+    
 
     const handleClick = () => {
         setChevron(prev => !prev)

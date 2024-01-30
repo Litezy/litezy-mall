@@ -53,8 +53,13 @@ const SubHeaders = () => {
   const Next = () => {
     setCurr((prevCurr) => {
       const newCurr = prevCurr === items.length - 1 ? 0 : prevCurr + 1;
-      const newTranslateX = `translateX(-${newCurr * 90}vw)`;
-      document.getElementById("slide").style.transform = newTranslateX;
+      if(window.innerWidth < 760){
+        const newTranslateX = `translateX(-${newCurr * 90}vw)`;
+        document.getElementById("slide").style.transform = newTranslateX;
+       }else{
+        const newTranslateX = `translateX(-${newCurr * 70}vw)`;
+        document.getElementById("slide").style.transform = newTranslateX;
+       }
       return newCurr;
     });
   };
@@ -62,8 +67,14 @@ const SubHeaders = () => {
   const Prev = () => {
     setCurr((prevCurr) => {
       const newCurr = prevCurr === 0 ? items.length - 1 : prevCurr - 1;
+     if(window.innerWidth < 760){
       const newTranslateX = `translateX(-${newCurr * 90}vw)`;
       document.getElementById("slide").style.transform = newTranslateX;
+     }else{
+      const newTranslateX = `translateX(-${newCurr * 70}vw)`;
+      document.getElementById("slide").style.transform = newTranslateX;
+     }
+     
       return newCurr;
     });
   };
@@ -71,8 +82,13 @@ const SubHeaders = () => {
   const ChangeCurrent = (index) => {
     setCurr(prev => {
       const newCurr = index
-      const newTranslateX = `translateX(-${index * 70}vw)`;
-      document.getElementById("slide").style.transform = newTranslateX;
+      if(window.innerWidth < 760){
+        const newTranslateX = `translateX(-${index * 90}vw)`;
+        document.getElementById("slide").style.transform = newTranslateX;
+       }else{
+        const newTranslateX = `translateX(-${index * 70}vw)`;
+        document.getElementById("slide").style.transform = newTranslateX;
+       }
       return newCurr
     })
   }

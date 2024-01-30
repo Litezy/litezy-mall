@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { FiShoppingCart } from "react-icons/fi";
 import { FaEnvelopeOpen, FaPhone, FaRotate, FaUserLarge } from "react-icons/fa6";
 import { IoIosHeartEmpty } from "react-icons/io";
@@ -29,11 +29,25 @@ const CartandSearch = () => {
         setShowSub(prev => !prev)
         setBars(false)
     }
+    const toggle = useRef()
 
-    // const transformBar = {
-    //     transform: bars === true ? 'rotate(180deg)': 'rotate(0deg)',
-    //     transition: bars === true ? 'all ease-in-out 1.3s': 'all ease-in-out 1.3s'
-    // }
+    useEffect(()=>{
+        if(toggle){
+                window.addEventListener('click', ()=>{
+              if(toggle.current !== null){
+                if(toggle.current.contains(event.target)){
+                    console.log('clicked inside')
+                }else{
+                    setShowSub(false)
+                    console.log('clicked outside')
+                }
+              }
+                }, true)
+            }
+        
+    },[])
+
+   
     return (
         <div>
             <div className={`flex items-center w-[100%] justify-between mx-auto pt-2 ${bars ? 'fixed z-20 -mt-4 bg-teal-800/10' : '' }headscroll`}>
@@ -91,7 +105,7 @@ const CartandSearch = () => {
                     <button className='bg-[#fdbe55]  px-2 py-1 rounded-full text-white text-[11px]'>Search</button>
 
                 </div>
-                <div className={` w-[80%] ml-1 absolute py-3 z-20 top-[15%] h-fit rounded-md font overflow-hidden bg-[#fdbe55] mt-1 md:hidden ${showSub === true ? 'h-[10rem]':'hidden'} transition-all ease-in-out `}>
+                <div ref={toggle} className={` w-[80%] ml-1 absolute py-3 z-20 top-[15%] h-fit rounded-md font overflow-hidden bg-[#fdbe55] mt-1 md:hidden ${showSub === true ? 'h-[10rem]':'hidden'} transition-all ease-in-out `}>
                     <ul className={` ${showSub === true ? 'h-fit' : ''} grid grid-cols-2 text-white gap-2 px-2 w-11/12 mx-auto h-full text-sm  subcategory transition-all ease-in-out   `}>
                         <Link to={`/`} className=''>Laptop & Computer</Link>
                         <Link to={`/`}>Cameras</Link>
