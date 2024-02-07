@@ -53,7 +53,7 @@ const CartandSearch = () => {
             <div className={`flex items-center w-[100%] md:w-[30%] justify-between  mx-auto pt-2 mb-2 z-20  `}>
                 <div className="cart pl-8 md:px-10 w-[80%] md:w-fit flex items-center justify-between gap-3  ">
                     <FiShoppingCart className='text-4xl md:text-5xl font-bold text-yellow-400' />
-                    <p className={`md:font-bold font font-bold  text-md md:text-4xl  w-full ${bars ? 'text-white' : 'text-[#0d1a50]'}`}>Litezy Mall</p>
+                    <p className={`md:font-bold font font-bold  text-md md:text-4xl  w-full`}>Litezy Mall</p>
                 </div>
                 <div className="md:hidden text-3xl w-20 flex items-center justify-center">
                     <Icon id='bars' onClick={Change} className="transition-all icon ease-in-out duration-100 cursor-pointer " />
@@ -106,7 +106,7 @@ const CartandSearch = () => {
 
                 </div>
                 <div ref={toggle} className={` w-[80%] ml-1 absolute py-3 z-20 top-[100%] h-fit rounded-md font overflow-hidden bg-[#fdbe55] mt-1 md:hidden ${showSub === true ? 'h-[10rem]' : 'hidden'} transition-all ease-in-out `}>
-                    <ul className={` ${showSub === true ? 'h-fit' : ''} grid grid-cols-2 text-white gap-2 px-2 w-11/12 mx-auto h-full text-sm  subcategory transition-all ease-in-out   `}>
+                    <ul className={` ${showSub === true ? 'h-fit' : ''} grid grid-cols-2 text-white gap-2 px-2 w-11/12 mx-auto h-full text-sm  subcategory transition-all ease-in-out font-bold  `}>
                         <Link to={`/`} className=''>Laptop & Computer</Link>
                         <Link to={`/`}>Cameras</Link>
                         <Link to={`/`}>Gaming & Gadget</Link>
