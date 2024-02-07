@@ -4,7 +4,7 @@ import Gostar from '../utils/Gostar'
 const Brands = ({image1, image2,name1,name2,strike1,strike2,price1,price2  }) => {
     
   return (
-    <div className="flex items-center gap-5 w-[90%]  mx-5 mt-4">
+    <div className="flex items-center gap-5 md:w-[90%]  md:mx-5 mx-2 mt-2 md:mt-4">
                         <div className="w-3/6 h-32 bg-white rounded-sm">
                                 <div className="flex items-center gap-2 justify-center h-32" >
                                     <div className="w-[40%] ">

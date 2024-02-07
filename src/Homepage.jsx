@@ -10,7 +10,7 @@ const Homepage = () => {
     <PageLayout>
     <Card />
     <div className="w-[94%] poppins mx-auto ">
-      <div className="uppercase text-[#0d1a50] text-2xl -mt-2 font-bold">best seller product</div>
+      <div className="uppercase text-lg text-[#0d1a50] md:text-2xl -mt-2 font-bold">best seller product</div>
     </div>
     <Card2 />
     <BrandsCard />

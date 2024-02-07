@@ -16,14 +16,14 @@ const JustForYou = () => {
     }
 
     const height = {
-        height: showmore === true ? '73rem' : '40rem',
+        height: showmore === true ? '73rem' : 'fit',
         transition: showmore === true ? 'height ease-in-out 1.6s' : 'height ease-in-out 0.8s'
     }
     return (
-        <div className='w-[95%] mx-auto '>
-            <div className="text-[#0d1a50] uppercase text-2xl mt-10 font-bold poppins">Just for you</div>
-            <div style={height} className="w-full ">
-                <div className="flex items-center justify-between gap-3 w-full">
+        <div className='md:w-[95%] mx-auto'>
+            <div className="text-[#0d1a50] uppercase text-xl md:text-2xl mt-10 font-bold poppins">Just for you</div>
+            <div style={height} className="w-full grid md:block h-full ">
+                <div className="md:flex items-center justify-between  mb-2 gap-3 md:w-full">
                     <JustForYouCard Name={'JBL t450 headphone'} category={`tv & audio`} image={jblimg} price={'$30'} strike={`$40`} />
                     <JustForYouCard Name={'Gaming computer mouse'} category={`Gaming & gadget`} image={mouseimg} price={'$30'} strike={`$40`} />
                     <JustForYouCard Name={'action camera 4k'} category={`cameras`} image={cameraimg} price={'$30'} strike={`$40`} />
@@ -31,7 +31,7 @@ const JustForYou = () => {
                     <JustForYouCard Name={'tp-Link wifi router'} category={`Accessories`} image={tplinkimg} price={'$30'} strike={`$40`} />
                     <JustForYouCard Name={'Apple watch series 3'} category={`Gaming & gadget`} image={appleimg} price={'$30'} strike={`$40`} />
                 </div>
-                <div className="flex items-center justify-between gap-3 w-full">
+                <div className="md:flex items-center justify-between h-fit  mb-2 gap-3 md:w-full">
                     <JustForYouCard Name={'Gaming computer mouse'} category={`Gaming & gadget`} image={mouseimg} price={'$30'} strike={`$40`} />
                     <JustForYouCard Name={'action camera 4k'} category={`cameras`} image={cameraimg} price={'$30'} strike={`$40`} />
                     <JustForYouCard Name={'Apple iPad'} category={`smartphone & tablet`} image={huaweiimg} price={'$30'} strike={`$40`} />
@@ -41,7 +41,7 @@ const JustForYou = () => {
                 </div>
 
                 {showmore && <>
-                    <div className="flex items-center justify-between gap-3 w-full">
+                    <div className="md:flex items-center justify-between h-fit  mb-2 gap-3 md:w-full">
                         <JustForYouCard Name={'Gaming computer mouse'} category={`Gaming & gadget`} image={mouseimg} price={'$30'} strike={`$40`} />
                         <JustForYouCard Name={'action camera 4k'} category={`cameras`} image={cameraimg} price={'$30'} strike={`$40`} />
                         <JustForYouCard Name={'Apple iPad'} category={`smartphone & tablet`} image={huaweiimg} price={'$30'} strike={`$40`} />
@@ -49,7 +49,7 @@ const JustForYou = () => {
                         <JustForYouCard Name={'Apple watch series 3'} category={`Gaming & gadget`} image={appleimg} price={'$30'} strike={`$40`} />
                         <JustForYouCard Name={'tp-Link wifi router'} category={`Accessories`} image={tplinkimg} price={'$30'} strike={`$40`} />
                     </div>
-                    <div className="flex items-center justify-between gap-3 w-full">
+                    <div className="md:flex items-center justify-between h-fit  mb-2 gap-3 md:w-full">
                         <JustForYouCard Name={'JBL t450 headphone'} category={`tv & audio`} image={jblimg} price={'$30'} strike={`$40`} />
                         <JustForYouCard Name={'Gaming computer mouse'} category={`Gaming & gadget`} image={mouseimg} price={'$30'} strike={`$40`} />
                         <JustForYouCard Name={'action camera 4k'} category={`cameras`} image={cameraimg} price={'$30'} strike={`$40`} />

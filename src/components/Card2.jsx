@@ -45,13 +45,13 @@ const Card2 = () => {
         },
     ]
     return (
-        <div className='w-full mb-20 '>
-            <div className="w-[94%]  font mx-auto flex items-start justify-between gap-10 mt-10">
-                <div className="w-[20%] h-[30rem] mx-w-[25%]  bg-[#f3f2f7] rounded-md">
-                    <div className="w-[90%] mx-auto  mt-4 h-[28rem]">
+        <div className='w-full md:mb-20 mb-10 '>
+            <div className="w-[94%]  font mx-auto md:flex items-start justify-between gap-10 mt-10">
+                <div className="md:w-[20%] h-[30rem] mx-w-[25%]  bg-[#f3f2f7] rounded-md mb-10 md:mb-0">
+                    <div className="w-[90%] mx-auto  mt-4 md:h-[28rem]">
                         <div className="flex items-start justify-center relative  h-48 ">
                             <img src={iphoneimg} className='w-32 ' alt="" />
-                            <div className="absolute w-16 h-16 bottom-0 right-12 rounded-full bg-[#fe3e3e] text-center flex items-center justify-center text-white font-bold poppins">20% OFF</div>
+                            <div className="absolute w-16 h-16 bottom-5 md:bottom-0 right-[26%] md:right-12 rounded-full bg-[#fe3e3e] text-center flex items-center justify-center text-white font-bold poppins">20% OFF</div>
                         </div>
                         <hr className='hr  mt-3' />
                         <div className="">
@@ -75,16 +75,16 @@ const Card2 = () => {
                     </div>
                 </div>
 
-                <div className="w-[80%]">
-                    <div className="flex items-center  justify-between">
+                <div className="md:w-[80%] w-full">
+                    <div className="flex items-center  justify-between ">
                         <h1 className=' uppercase poppins font-bold text-2xl'>Deals of the day</h1>
                         <div className="flex text-2xl">
                             <IoIosArrowBack />
                             <IoIosArrowForward />
                         </div>
                     </div>
-                    <div className="flex items-center justify-between gap-5 mt-6">
-                        <div className="bg-[#fff9ef] w-[50%] h-[21rem] rounded-md">
+                    <div className="md:flex items-center justify-between gap-5 mt-6 ">
+                        <div className="bg-[#fff9ef] border md:w-[50%] h-[21rem] rounded-md">
                             <div className="w-[90%] mx-auto flex  h-[18rem] ">
                                 {gaming.map((item, index) => (
                                     <div className="flex w-full items-center mt-10 justify-center roboto font-medium gap-3" key={index}>
@@ -115,7 +115,7 @@ const Card2 = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="bg-[#fff9ef] w-[50%] h-[21rem] rounded-md">
+                        <div className="bg-[#fff9ef] mt-10 md:mt-0 md:w-[50%] h-[21rem] rounded-md">
                             <div className="w-[90%] mx-auto flex  h-[18rem] ">
                                 {games.map((item, index) => (
                                     <div className="flex w-full mt-10 items-center justify-center roboto font-medium gap-3" key={index}>
@@ -148,17 +148,17 @@ const Card2 = () => {
                         </div>
                     </div>
 
-                    <div className="w-[95%] mx-auto mt-2  ">
+                    <div className="md:w-[95%] mx-auto mt-2  ">
                    {sponsors.map((item,index) =>(
-                    <div className="flex items-center rounded-md justify-between px-4 py-3 bg-[#d4c8b1]" key={index}>
-                        <IoIosArrowBack className='text-3xl'/>
-                            <img src={item.img1} className='w-20' alt="" />
-                            <img src={item.img2} className='w-20' alt="" />
-                            <img src={item.img3} className='w-20' alt="" />
-                            <img src={item.img4} className='w-20' alt="" />
-                            <img src={item.img5} className='w-20' alt="" />
-                            <img src={item.img6} className='w-20' alt="" />
-                        <IoIosArrowForward className='text-3xl'/>
+                    <div className="flex items-center rounded-md gap-1 justify-between md:px-4 py-3 bg-[#d4c8b1]" key={index}>
+                        <IoIosArrowBack className='md:text-3xl text-xl'/>
+                            <img src={item.img1} className='md:w-20 w-10' alt="" />
+                            <img src={item.img2} className='md:w-20 w-10' alt="" />
+                            <img src={item.img3} className='md:w-20 w-10' alt="" />
+                            <img src={item.img4} className='md:w-20 w-10' alt="" />
+                            <img src={item.img5} className='md:w-20 w-10' alt="" />
+                            <img src={item.img6} className='md:w-20 w-10' alt="" />
+                        <IoIosArrowForward className='md:text-3xl text-xl'/>
                     </div>
                    ))}
                     </div>
