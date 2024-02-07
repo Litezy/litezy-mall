@@ -95,10 +95,10 @@ const CartandSearch = () => {
                 </ul>
             </div>
 
-            <div className="w-[90%] h-fit mx-auto mt-2 md:hidden ">
+            <div className="w-[98%] h-fit mx-auto mt-2 md:hidden ">
 
                 <div className=" bg-[#fff9ef] px-1 w-full relative ap-3 outline-none h-fit rounded-full shadow-md flex items-center justify-between">
-                    <div onClick={controlSUb} className='flex border justify-center items-center rounded-full px-1 pl-1 bg-white  font-medium text-[10px] w-[30%]'>
+                    <div onClick={controlSUb} className='flex border justify-center items-center rounded-full px-1 pl-1 bg-white  font-medium text-[10px] w-[25%]'>
                         <p>All Categories</p>
                         <Arrow className='font-light text-2xl cursor-pointer' /></div>
                     <input className=' w-[50%] bg-transparent text-[12px]  ml-3 h-10 outline-none' type="text" placeholder='Search Products...' />
