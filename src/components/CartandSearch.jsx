@@ -101,7 +101,7 @@ const CartandSearch = () => {
                     <div onClick={controlSUb} className='flex border justify-center items-center rounded-full px-1 pl-1 bg-white  font-medium text-[11px] '>
                         <p>All Categories</p>
                         <Arrow className='font-light text-2xl cursor-pointer' /></div>
-                    <input className=' w-[60%] bg-transparent text-[12px]  ml-3 h-10 outline-none' type="text" placeholder='Search Products...' />
+                    <input className=' w-[50%] bg-transparent text-[12px]  ml-3 h-10 outline-none' type="text" placeholder='Search Products...' />
                     <button className='bg-[#fdbe55]  px-2 py-1 rounded-full text-white text-[11px]'>Search</button>
 
                 </div>
