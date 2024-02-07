@@ -53,8 +53,8 @@ const SubHeaders = () => {
   const Next = () => {
     setCurr((prevCurr) => {
       const newCurr = prevCurr === items.length - 1 ? 0 : prevCurr + 1;
-      if(window.innerWidth < 760){
-        const newTranslateX = `translateX(-${newCurr * 90}vw)`;
+      if(window.innerWidth < 768){
+        const newTranslateX = `translateX(-${newCurr * 89}vw)`;
         document.getElementById("slide").style.transform = newTranslateX;
        }else{
         const newTranslateX = `translateX(-${newCurr * 70}vw)`;
@@ -67,8 +67,8 @@ const SubHeaders = () => {
   const Prev = () => {
     setCurr((prevCurr) => {
       const newCurr = prevCurr === 0 ? items.length - 1 : prevCurr - 1;
-     if(window.innerWidth < 760){
-      const newTranslateX = `translateX(-${newCurr * 90}vw)`;
+     if(window.innerWidth < 768){
+      const newTranslateX = `translateX(-${newCurr * 89}vw)`;
       document.getElementById("slide").style.transform = newTranslateX;
      }else{
       const newTranslateX = `translateX(-${newCurr * 70}vw)`;
@@ -82,8 +82,8 @@ const SubHeaders = () => {
   const ChangeCurrent = (index) => {
     setCurr(prev => {
       const newCurr = index
-      if(window.innerWidth < 760){
-        const newTranslateX = `translateX(-${index * 90}vw)`;
+      if(window.innerWidth < 768){
+        const newTranslateX = `translateX(-${index * 89}vw)`;
         document.getElementById("slide").style.transform = newTranslateX;
        }else{
         const newTranslateX = `translateX(-${index * 70}vw)`;
@@ -93,12 +93,12 @@ const SubHeaders = () => {
     })
   }
 
-  // useEffect(() =>{
-  //   const interval = setInterval(() => {
-  //     Next()
-  //   },5000)
-  //   return ()=> clearInterval(interval)
-  // },[])
+  useEffect(() =>{
+    const interval = setInterval(() => {
+      Next()
+    },5000)
+    return ()=> clearInterval(interval)
+  },[])
   return (
     <div className="w-full md:h-[30rem] mb-4 relative overflow-hidden ">
       <div className="flex text-2xl w-fit ml-auto gap-10 mb-2 text-white bg-[#fdc931]">
@@ -106,13 +106,13 @@ const SubHeaders = () => {
         <IoIosArrowForward onClick={Next} className=' cursor-pointer'/>
       </div>
       <div className=" w-full items-center flex relative container overflow-hidden h-52 md:h-full ">
-        <div className="overflow-x-auto  w-full h-full  ">
-          <div id='slide' className="slider  border-2 transition-transform ease-in-out h-full  flex items-center  ">
+        <div className=" w-full h-full  ">
+          <div id='slide' className="slider  transition-transform ease-in-out h-full  flex items-center  ">
             {items.map((item, i) => (
-              <div key={i} className="md:w-[70vw] w-full h-full  ">
-                <div className="flex items-center justify-between md:gap-20 w-[100vw] md:w-[70vw]  h-full mx-auto" >
+              <div key={i} className="md:w-[70vw] w-full h-full   ">
+                <div className="flex items-center justify-between md:gap-20 w-[100vw] md:w-[70vw] overflow-hidden  h-full mx-auto" >
                   <div className="w-[100%] md:w-[65%] card-bg h-full rounded-sm flex items-center justify-center text-white">
-                    <div className=" flex items-center justify-center gap-10 px-2  md:px-10 my-auto">
+                    <div className=" flex items-center justify-center gap-5 px-2 w-[90%] mx-auto  md:px-10 my-auto">
                       <div className="md:w-[60%] w-[60%] text-sm ">
                         <h1 className=' capitalize md:mb-3 md:text-2xl font-bold'>Upto <span className='text-[#ff3e3f] '>{item.cent}</span> Off <br /> this {item.week}</h1>
                         <h2 className='md:text-xl font-bold md:mb-3 '>{item.title}</h2>

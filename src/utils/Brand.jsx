@@ -5,7 +5,7 @@ const Brand = ({ image,name,strike,price }) => {
     return (
         <div className="md:w-3/6 md:h-32 h-fit mt-5 md:mt-0 py-2 md:py-0 bg-white rounded-sm">
             <div className="flex items-center gap-2 justify-center h-32" >
-                <div className="w-[40%] "  >
+                <div className="w-[30%] md:w-[40%] "  >
                     <img src={image} className='w-full  mt-3' alt="" />
                 </div>
                 <div className="w-[60%]">
